@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap");
+
+/* Reset all margins, padding, and box sizes */
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family:
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Animated Vibrant Mesh Background */
+body {
+  color: #f8fafc;
+  background: linear-gradient(
+    135deg,
+    #090d16 0%,
+    #1e1b4b 35%,
+    #31103f 70%,
+    #0f172a 100%
+  );
+  background-size: 300% 300%;
+  animation: dynamicGlow 18s ease infinite;
+}
+
+/* Ambient Animated Glow Keyframes */
+@keyframes dynamicGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glassmorphism Card Style Utility */
+.glass-card {
+  background: rgba(15, 23, 42, 0.65) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Universal Button Hover & Scale Animations */
+button,
+.animated-btn,
+a {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+button:hover,
+.animated-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.15);
+}
+
+button:active,
+.animated-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ========================================================
+   PARKLINK VIBRANT DARK THEME & ANIMATIONS
+   ======================================================== */
+
+:root {
+  --bg-dark: #050810;
+  --panel-dark: rgba(18, 24, 38, 0.65);
+  --panel-border: rgba(56, 189, 248, 0.2);
+  --primary-glow: #0ea5e9; /* Vibrant Sky Blue */
+  --secondary-glow: #e11d48; /* Neon Rose/Magenta */
+  --accent-green: #22c55e; /* Electric Green */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+}
+
+/* Base Body Style */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+/* --- De-cluttered Stats Grid --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.glass-stat-card {
+  background: var(--panel-dark);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(14, 165, 233, 0.5);
+  box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.2);
+}
+
+/* Individual Card Accent Glows */
+.card-glow-blue {
+  box-shadow: inset 0 0 20px rgba(14, 165, 233, 0.12);
+}
+.card-glow-magenta {
+  box-shadow: inset 0 0 20px rgba(225, 29, 72, 0.12);
+}
+.card-glow-green {
+  box-shadow: inset 0 0 20px rgba(34, 197, 94, 0.12);
+}
+
+.stat-icon {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-label {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-value {
+  margin: 0;
+  color: #ffffff;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* --- Eye-Catching Camera Section Wrapper --- */
+.scanner-hero-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgba(14, 165, 233, 0.05) 0%,
+    rgba(5, 8, 16, 0) 100%
+  );
+  border: 1px solid var(--panel-border);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.scanner-hero-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scanner-hero-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+}
+
+/* Dynamic Pulsating Glow for Active Camera */
+.scanner-container-card {
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 18px;
+  transition: all 0.4s ease;
+}
+
+.scanner-active-glow {
+  animation: neon-pulse 2s infinite ease-in-out;
+}
+
+@keyframes neon-pulse {
+  0% {
+    box-shadow:
+      0 0 20px rgba(14, 165, 233, 0.3),
+      inset 0 0 15px rgba(14, 165, 233, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 45px rgba(14, 165, 233, 0.6),
+      inset 0 0 25px rgba(14, 165, 233, 0.4);
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(14, 165, 233, 0.3),
+      inset 0 0 15px rgba(14, 165, 233, 0.2);
+  }
+}
