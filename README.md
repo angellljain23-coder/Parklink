@@ -1,48 +1,45 @@
-# ⚡ ParkLink — AI-Powered Anonymous Vehicle Contact System
+# 🚗 ParkLink
 
-> **A real-time, privacy-first platform enabling seamless driver notifications and voice connections via AI license plate OCR and WebRTC.**
+> **Smart, Anonymous, Privacy-First Vehicle Contact Platform**
 
----
-
-## 🚀 Overview
-
-**ParkLink** bridges the gap between vehicle owners and the public without sacrificing personal privacy. Whether a car is blocking a driveway, has its headlights left on, or is parked illegally, ParkLink allows anyone to instantly dispatch an alert or initiate an anonymous voice call by simply scanning a license plate or QR tag.
+ParkLink solves urban parking friction by allowing drivers and residents to connect instantly regarding illegally parked or blocking vehicles without ever exposing personal phone numbers or sensitive information.
 
 ---
 
-## ✨ Key Features
+## 🌟 Key Features
 
-* **⚡ AI Vehicle Plate Scanner**: Real-time license plate detection powered by Tesseract.js directly inside the browser.
-* **🚨 Direct Alert Dispatcher**: Select preset hazard scenarios (*Blocking Driveway*, *Flat Tire*, *Lights On*) or send custom notes with designated urgency levels.
-* **📞 Anonymous WebRTC Voice Calling**: Establish secure, peer-to-peer audio calls between drivers and citizens using PeerJS without revealing phone numbers.
-* **📱 Dynamic QR Vehicle Tags**: Generate downloadable, toggleable QR codes for registered vehicles so passersby can notify owners on the fly.
-* **💎 Cyberpunk / Glassmorphism UI**: High-impact, pitch-ready dark theme (`#050810`) featuring cyan/magenta glowing accents and responsive stat dashboards.
+* **📷 In-Browser AI OCR**: Instant license plate extraction using client-side `Tesseract.js` directly in the browser—zero backend lag or privacy leaks.
+* **📞 Anonymous WebRTC Voice Calls**: Real-time browser-to-browser audio calls powered by `PeerJS`, connecting users safely without revealing phone numbers.
+* **🚨 Hazard Alerts & Dispatches**: Send instant notifications with custom urgency levels for common parking issues (e.g., blocked driveway, open windows, lights left on).
+* **📱 Windshield QR Vehicle Tags**: Generate downloadable, dynamic QR tags for vehicle dashboards to allow seamless emergency contact.
+* **⚡ Modern Glassmorphism UI**: Built with Next.js 15 App Router and Tailwind CSS for a fast, mobile-optimized experience.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Framework**: Next.js 15 (App Router)
-* **Styling**: Modern CSS3 (Glassmorphism, CSS Variables, Flex/Grid Layouts)
-* **OCR & Computer Vision**: Tesseract.js
-* **Real-time Voice**: WebRTC (PeerJS)
-* **Database**: MongoDB (Mongoose)
-* **QR Generation**: `qrcode.react`
-* **Version Control & Hosting**: GitHub & Vercel
+* **Framework**: Next.js 15 (App Router, React 19)
+* **Database**: MongoDB Atlas (Mongoose ORM)
+* **Real-time Voice**: PeerJS (WebRTC)
+* **OCR / AI Vision**: Tesseract.js
+* **Styling**: Tailwind CSS
+* **Deployment**: Vercel
 
 ---
 
-## 📂 Project Structure
+## 🚀 Live Demo & Links
 
-```text
-parklink/
-├── app/
-│   ├── alert/            # Dispatch alert page & urgency selection
-│   ├── api/              # Serverless API routes (vehicles, alerts, notifications)
-│   ├── components/       # Scanner, WebRTC Modal, Navbar, Logo components
-│   ├── dashboard/        # Main hub (Stats overview & Registered vehicles management)
-│   ├── register/         # Vehicle registration workflow
-│   ├── globals.css       # Theme definitions, gradients, and glassmorphism styling
-│   └── page.js           # Landing page
-├── lib/                  # MongoDB utility connections and Mongoose models
-└── public/               # Static assets & icons
+* **Live Web Application**: [https://parklink-bay.vercel.app](https://parklink-bay.vercel.app)
+* **Project Repository**: [GitHub Link Here]
+* **Demo Video**: [Demo Video Link Here]
+
+---
+
+## ⚙️ Local Development Setup
+
+Follow these steps to run ParkLink locally on your machine:
+
+### 1. Clone the repository
+```bash
+git clone [https://github.com/your-username/parklink.git](https://github.com/your-username/parklink.git)
+cd parklink
